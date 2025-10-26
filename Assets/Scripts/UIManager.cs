@@ -39,8 +39,8 @@ public class UIManager : MonoBehaviour
     #region .  OnButtonNextClicked()  .
     public void OnButtonNextClicked()
     {
-        this._currentPatternIndex = ++this._dropdownPatterns.value % this._allPatterns.Length;
-        this._currentPattern      =   this._allPatterns[this._currentPatternIndex];
+        this._currentPatternIndex = this._dropdownPatterns.value % this._allPatterns.Length;
+        this._currentPattern      = this._allPatterns[this._currentPatternIndex];
 
         this.OnButtonPlayClicked();
 
@@ -51,8 +51,8 @@ public class UIManager : MonoBehaviour
     #region .  OnButtonPreviousClicked()  .
     public void OnButtonPreviousClicked()
     {
-        this._currentPatternIndex = --this._dropdownPatterns.value % this._allPatterns.Length;
-        this._currentPattern      =   this._allPatterns[this._currentPatternIndex];
+        this._currentPatternIndex = this._dropdownPatterns.value % this._allPatterns.Length;
+        this._currentPattern      = this._allPatterns[this._currentPatternIndex];
 
         this.OnButtonPlayClicked();
 
