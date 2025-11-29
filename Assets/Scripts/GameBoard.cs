@@ -108,9 +108,9 @@ public class GameBoard : Singleton<GameBoard>
         this._currentState.ClearAllTiles();
         this._nextState   .ClearAllTiles();
 
-        this.Iterations = 0;
-        this.Population = 0;
-        this.PatternTime       = 0f;
+        this.Iterations  = 0;
+        this.Population  = 0;
+        this.PatternTime = 0f;
 
     }   // Clear()
     #endregion
@@ -125,16 +125,11 @@ public class GameBoard : Singleton<GameBoard>
         {
             for (int y = -1; y <= 1; y++)
             {
+                if (x == 0 && y == 0) continue;
+
                 Vector3Int neighbor = cell + new Vector3Int(x, y, 0);
 
-                if (x == 0 && y == 0)
-                {
-                    continue;
-                }
-                else if (this.IsAlive(neighbor))
-                {
-                    count++;
-                }
+				if (this.IsAlive(neighbor)) count++;
             }
         }
 
