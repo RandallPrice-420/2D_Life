@@ -87,11 +87,11 @@ echo %project_name% game using Unity %editor_version%.>> %filePath%
 echo.>> %filePath%
 
 git init
+git pull master, origin
 git add %filePath%
 git commit -m "Initial project upload."
 git branch -M master
 git remote add origin %remote_origin%
-git pull master, origin
 git push -u origin master
 git status
 @echo off
